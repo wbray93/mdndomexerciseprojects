@@ -1,13 +1,11 @@
-//Styling through dom manipulation rather than html file style codes:
-
-const contentStyling = document.querySelector(contentStyling)
-
-
 // Adding a new feature to have the shopping list persist via local storage
-
+const content = document.querySelector("#content")
 const ul = document.querySelector("ul");
 const input = document.querySelector("input");
 const button = document.querySelector("button");
+content.classList.add("contentStyling");
+button.classList.add("listButtonStyling");
+
 
 //New function to load items from local storage
 function loadItems() {
@@ -29,10 +27,14 @@ function addItemToDOM(item) {
     const li = document.createElement("li");
     const span = document.createElement("span");
     const deleteButton = document.createElement("button");
+    
 
     li.appendChild(span);
     li.appendChild(deleteButton);
     span.textContent = item;
+    li.classList.add("listStyling");
+    deleteButton.classList.add("listButtonStyling")
+
 
     deleteButton.textContent = "Delete";
     deleteButton.style.color = "red";

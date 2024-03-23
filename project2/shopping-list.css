@@ -1,9 +1,13 @@
-li {
+.contentStyling {
+    margin-left: 100px;
+}
+
+.listStyling {
     margin-bottom: 10px;
 }
 
-li button {
+.listButtonStyling {
     font-size: 12px;
     margin-left: 20px;
-    color: #666;
+    color: red;
 }
